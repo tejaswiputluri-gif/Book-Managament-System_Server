@@ -108,3 +108,10 @@ const PORT = process.env.PORT || 8800;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Book Management System API is running",
+    status: "ok"
+  });
+});
